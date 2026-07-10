@@ -4,52 +4,67 @@ export type Project = {
   category: string;
   summary: string;
   tags: string[];
-  href?: string;
-  imageSrc?: string;
-  imageAlt?: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+  featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    slug: "placeholder-1",
-    title: "Ukázkový projekt — E-shop",
-    category: "E-shop",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["Next.js", "E-commerce"],
+    slug: "sablona3",
+    title: "Barber Elite — prémiový barbershop",
+    category: "Barbershop",
+    summary:
+      "Tmavý, luxusní web pro prémiový barbershop se skutečnými referencemi a rezervací termínů.",
+    tags: ["Barbershop", "Prémiový design", "Rezervace"],
+    href: "https://webyprovas-cz.github.io/sablona3/",
+    imageSrc: "/portfolio/sablona3.png",
+    imageAlt: "Náhled webu Barber Elite",
+    featured: true,
   },
   {
-    slug: "placeholder-2",
-    title: "Ukázkový projekt — Firemní web",
-    category: "Firemní web",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["Redesign", "SEO"],
+    slug: "sablona1",
+    title: "Iron & Oak Barbershop",
+    category: "Barbershop",
+    summary:
+      "Řemeslný barbershop web v syrovém, mužném stylu — střihy, vousy a holení břitvou.",
+    tags: ["Barbershop", "Řemeslný styl"],
+    href: "https://webyprovas-cz.github.io/sablona1/",
+    imageSrc: "/portfolio/sablona1.png",
+    imageAlt: "Náhled webu Iron & Oak Barbershop",
   },
   {
-    slug: "placeholder-3",
-    title: "Ukázkový projekt — Portfolio",
-    category: "Portfolio",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["UI/UX", "Animace"],
+    slug: "sablona2",
+    title: "Clean Cut Barbershop",
+    category: "Barbershop",
+    summary:
+      "Světlý, moderní barbershop web zaměřený na rodinné balíčky střihů.",
+    tags: ["Barbershop", "Světlý design"],
+    href: "https://webyprovas-cz.github.io/sablona2/",
+    imageSrc: "/portfolio/sablona2.png",
+    imageAlt: "Náhled webu Clean Cut Barbershop",
   },
   {
-    slug: "placeholder-4",
-    title: "Ukázkový projekt — Rezervační systém",
-    category: "Webová aplikace",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["Next.js", "Aplikace"],
+    slug: "website",
+    title: "Kadeřnictví Markéta Hloušková",
+    category: "Kadeřnictví",
+    summary:
+      "Rodinný kadeřnický salon na Praze 13 — služby, ceník a online objednávky telefonem.",
+    tags: ["Kadeřnictví", "Lokální byznys"],
+    href: "https://webyprovas-cz.github.io/website/",
+    imageSrc: "/portfolio/website.png",
+    imageAlt: "Náhled webu Kadeřnictví Markéta Hloušková",
   },
   {
-    slug: "placeholder-5",
-    title: "Ukázkový projekt — Landing page",
-    category: "Landing page",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["Konverze", "SEO"],
-  },
-  {
-    slug: "placeholder-6",
-    title: "Ukázkový projekt — Restaurace",
-    category: "Gastro web",
-    summary: "Zástupná ukázka — bude nahrazena reálnou realizací.",
-    tags: ["Rezervace", "Responzivní"],
+    slug: "rapunzel",
+    title: "Rapunzeli — Kadeřnictví Řeporyje",
+    category: "Kadeřnictví",
+    summary:
+      "Pohádkově laděný web kadeřnictví s důrazem na atmosféru a osobní přístup.",
+    tags: ["Kadeřnictví", "Atmosféra"],
+    href: "https://webyprovas-cz.github.io/rapunzel/",
+    imageSrc: "/portfolio/rapunzel.png",
+    imageAlt: "Náhled webu Rapunzeli Kadeřnictví",
   },
 ];
