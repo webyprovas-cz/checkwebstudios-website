@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { AutoScrollShot } from "@/components/motion/AutoScrollShot";
 import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
@@ -90,16 +90,11 @@ export function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-border" />
                 <span className="h-2.5 w-2.5 rounded-full bg-border" />
               </div>
-              <div className="relative aspect-[16/10]">
-                <Image
-                  src={withBasePath("/portfolio/sablona3.png")}
-                  alt="Náhled webu Barber Elite — ukázka naší práce"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover object-top"
-                />
-              </div>
+              <AutoScrollShot
+                src={withBasePath("/portfolio/sablona3-full.png")}
+                alt="Náhled webu Barber Elite — ukázka naší práce"
+                className="aspect-[16/10]"
+              />
             </motion.div>
             <motion.div
               animate={
