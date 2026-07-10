@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { ProjectMockup } from "@/components/ui/ProjectMockup";
+import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -84,10 +85,20 @@ export function Hero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="overflow-hidden rounded-2xl border border-border bg-surface shadow-xl"
             >
-              <ProjectMockup index={0} />
-              <div className="space-y-3 p-6">
-                <div className="h-2 w-1/3 rounded-full bg-primary/15" />
-                <div className="h-2 w-2/3 rounded-full bg-primary/10" />
+              <div className="flex items-center gap-1.5 border-b border-border bg-surface px-3 py-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-border" />
+                <span className="h-2.5 w-2.5 rounded-full bg-border" />
+                <span className="h-2.5 w-2.5 rounded-full bg-border" />
+              </div>
+              <div className="relative aspect-[16/10]">
+                <Image
+                  src={withBasePath("/portfolio/sablona3.png")}
+                  alt="Náhled webu Barber Elite — ukázka naší práce"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-top"
+                />
               </div>
             </motion.div>
             <motion.div

@@ -7,7 +7,6 @@ export type Project = {
   href: string;
   imageSrc: string;
   imageAlt: string;
-  featured?: boolean;
 };
 
 export const projects: Project[] = [
@@ -21,7 +20,6 @@ export const projects: Project[] = [
     href: "https://webyprovas-cz.github.io/sablona3/",
     imageSrc: "/portfolio/sablona3.png",
     imageAlt: "Náhled webu Barber Elite",
-    featured: true,
   },
   {
     slug: "sablona1",

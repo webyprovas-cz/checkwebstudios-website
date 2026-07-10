@@ -1,16 +1,12 @@
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/StaggerGroup";
 import { projects } from "@/lib/projects";
+import { withBasePath } from "@/lib/basePath";
 
 export function Portfolio() {
-  const featured = projects.find((project) => project.featured);
-  const rest = projects.filter((project) => !project.featured);
-
   return (
     <section id="reference" className="bg-muted/40 py-24 sm:py-32">
       <Container>
@@ -20,49 +16,8 @@ export function Portfolio() {
           description="Výběr webů, které jsme navrhli a postavili pro naše klienty."
         />
 
-        {featured && (
-          <Reveal className="mt-16">
-            <a href={featured.href} target="_blank" rel="noopener noreferrer">
-              <Card className="overflow-hidden !p-0 lg:grid lg:grid-cols-2 lg:items-stretch">
-                <div className="relative aspect-[16/10] lg:aspect-auto">
-                  <Image
-                    src={featured.imageSrc}
-                    alt={featured.imageAlt}
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-accent">
-                    Hlavní ukázka · {featured.category}
-                  </span>
-                  <h3 className="mt-2 font-heading text-2xl font-semibold text-foreground">
-                    {featured.title}
-                  </h3>
-                  <p className="mt-3 text-muted-foreground">{featured.summary}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {featured.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-secondary"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
-                    Zobrazit web <ExternalLink size={16} />
-                  </span>
-                </div>
-              </Card>
-            </a>
-          </Reveal>
-        )}
-
-        <StaggerGroup className="mt-8 grid gap-6 sm:grid-cols-2">
-          {rest.map((project) => (
+        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
             <StaggerItem key={project.slug}>
               <a
                 href={project.href}
@@ -73,10 +28,10 @@ export function Portfolio() {
                 <Card className="h-full overflow-hidden !p-0">
                   <div className="relative aspect-[16/10]">
                     <Image
-                      src={project.imageSrc}
+                      src={withBasePath(project.imageSrc)}
                       alt={project.imageAlt}
                       fill
-                      sizes="(min-width: 640px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover object-top"
                     />
                   </div>
