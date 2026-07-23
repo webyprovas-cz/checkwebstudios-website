@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { Quote } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { StaggerGroup, StaggerItem } from "@/components/motion/StaggerGroup";
+import { withBasePath } from "@/lib/basePath";
 
 const TESTIMONIALS = [
   {
@@ -10,18 +12,21 @@ const TESTIMONIALS = [
       "Nový web nám za první měsíc přinesl víc poptávek než starý web za celý rok. Komunikace s týmem byla od začátku do konce naprosto bezproblémová.",
     name: "Tomáš Novák",
     role: "Majitel, Kavárna Na Rohu",
+    avatar: "/testimonials/tomas-novak.jpg",
   },
   {
     quote:
       "Konečně máme web, který vypadá profesionálně a na mobilu funguje stejně dobře jako na počítači. Doporučuji všem, kdo řeší podobnou situaci.",
     name: "Petra Svobodová",
     role: "Jednatelka, Květinářství Petra",
+    avatar: "/testimonials/petra-svobodova.jpg",
   },
   {
     quote:
       "Oceňuji hlavně to, jak nám vše trpělivě vysvětlili a nechali nás rozhodovat. Výsledek předčil naše očekávání a SEO se zlepšilo prakticky hned.",
     name: "Lukáš Dvořák",
     role: "Provozovatel, Fitness Studio Impuls",
+    avatar: null,
   },
 ];
 
@@ -40,7 +45,17 @@ export function Testimonials() {
                   {t.quote}
                 </p>
                 <div className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-muted" />
+                  {t.avatar ? (
+                    <Image
+                      src={withBasePath(t.avatar)}
+                      alt={t.name}
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="h-10 w-10 rounded-full bg-muted" />
+                  )}
                   <div>
                     <p className="text-sm font-semibold text-foreground">
                       {t.name}
