@@ -4,7 +4,9 @@ export const siteConfig = {
   description:
     "CheckWeb Studios je webdesignová agentura, která navrhuje a vyvíjí moderní, rychlé a SEO optimalizované webové stránky a e-shopy na míru.",
   url: "https://www.checkwebstudios.cz",
-  email: "info@checkwebstudios.cz",
+  email: "checkweb.studios@outlook.cz",
+  phone: "+420 721 991 715",
+  phoneHref: "+420721991715",
   keywords: [
     "tvorba webových stránek",
     "webdesign",
@@ -23,6 +25,7 @@ export const organizationJsonLd = {
   url: siteConfig.url,
   description: siteConfig.description,
   email: siteConfig.email,
+  telephone: siteConfig.phone,
   areaServed: "CZ",
   address: {
     "@type": "PostalAddress",

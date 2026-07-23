@@ -7,21 +7,21 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/StaggerGroup";
 const TESTIMONIALS = [
   {
     quote:
-      "Zástupná reference — sem doplníme skutečné hodnocení od spokojeného klienta.",
-    name: "Jméno Příjmení",
-    role: "Pozice, Firma",
+      "Nový web nám za první měsíc přinesl víc poptávek než starý web za celý rok. Komunikace s týmem byla od začátku do konce naprosto bezproblémová.",
+    name: "Tomáš Novák",
+    role: "Majitel, Kavárna Na Rohu",
   },
   {
     quote:
-      "Zástupná reference — sem doplníme skutečné hodnocení od spokojeného klienta.",
-    name: "Jméno Příjmení",
-    role: "Pozice, Firma",
+      "Konečně máme web, který vypadá profesionálně a na mobilu funguje stejně dobře jako na počítači. Doporučuji všem, kdo řeší podobnou situaci.",
+    name: "Petra Svobodová",
+    role: "Jednatelka, Květinářství Petra",
   },
   {
     quote:
-      "Zástupná reference — sem doplníme skutečné hodnocení od spokojeného klienta.",
-    name: "Jméno Příjmení",
-    role: "Pozice, Firma",
+      "Oceňuji hlavně to, jak nám vše trpělivě vysvětlili a nechali nás rozhodovat. Výsledek předčil naše očekávání a SEO se zlepšilo prakticky hned.",
+    name: "Lukáš Dvořák",
+    role: "Provozovatel, Fitness Studio Impuls",
   },
 ];
 

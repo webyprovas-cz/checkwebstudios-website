@@ -40,11 +40,11 @@ export function Contact() {
                 {siteConfig.email}
               </a>
               <a
-                href="tel:+420000000000"
+                href={`tel:${siteConfig.phoneHref}`}
                 className="flex items-center gap-3 text-secondary transition-colors hover:text-accent"
               >
                 <Phone size={20} className="text-accent" />
-                +420 000 000 000
+                {siteConfig.phone}
               </a>
               <div className="flex items-center gap-3 text-secondary">
                 <MapPin size={20} className="text-accent" />

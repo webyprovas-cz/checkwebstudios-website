@@ -4,7 +4,6 @@ export type Project = {
   category: string;
   summary: string;
   tags: string[];
-  href: string;
   imageSrc: string;
   imageAlt: string;
 };
@@ -17,7 +16,6 @@ export const projects: Project[] = [
     summary:
       "Tmavý, luxusní web pro prémiový barbershop se skutečnými referencemi a rezervací termínů.",
     tags: ["Barbershop", "Prémiový design", "Rezervace"],
-    href: "https://webyprovas-cz.github.io/sablona3/",
     imageSrc: "/portfolio/sablona3.png",
     imageAlt: "Náhled webu Barber Elite",
   },
@@ -28,7 +26,6 @@ export const projects: Project[] = [
     summary:
       "Řemeslný barbershop web v syrovém, mužném stylu — střihy, vousy a holení břitvou.",
     tags: ["Barbershop", "Řemeslný styl"],
-    href: "https://webyprovas-cz.github.io/sablona1/",
     imageSrc: "/portfolio/sablona1.png",
     imageAlt: "Náhled webu Iron & Oak Barbershop",
   },
@@ -39,30 +36,7 @@ export const projects: Project[] = [
     summary:
       "Světlý, moderní barbershop web zaměřený na rodinné balíčky střihů.",
     tags: ["Barbershop", "Světlý design"],
-    href: "https://webyprovas-cz.github.io/sablona2/",
     imageSrc: "/portfolio/sablona2.png",
     imageAlt: "Náhled webu Clean Cut Barbershop",
-  },
-  {
-    slug: "website",
-    title: "Kadeřnictví Markéta Hloušková",
-    category: "Kadeřnictví",
-    summary:
-      "Rodinný kadeřnický salon na Praze 13 — služby, ceník a online objednávky telefonem.",
-    tags: ["Kadeřnictví", "Lokální byznys"],
-    href: "https://webyprovas-cz.github.io/website/",
-    imageSrc: "/portfolio/website.png",
-    imageAlt: "Náhled webu Kadeřnictví Markéta Hloušková",
-  },
-  {
-    slug: "rapunzel",
-    title: "Rapunzeli — Kadeřnictví Řeporyje",
-    category: "Kadeřnictví",
-    summary:
-      "Pohádkově laděný web kadeřnictví s důrazem na atmosféru a osobní přístup.",
-    tags: ["Kadeřnictví", "Atmosféra"],
-    href: "https://webyprovas-cz.github.io/rapunzel/",
-    imageSrc: "/portfolio/rapunzel.png",
-    imageAlt: "Náhled webu Rapunzeli Kadeřnictví",
   },
 ];
